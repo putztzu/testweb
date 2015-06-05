@@ -3,7 +3,8 @@ layout: plain
 ---
 
 
-# Jekyll How To using openSUSE specific steps
+# Jekyll How To Create a free website on Github using openSUSE
+openSUSE specific steps<br />
 Based on the documentation at http://jekyllrb.com
 
 ## Preamble:
