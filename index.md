@@ -31,13 +31,11 @@ Ruby =>2.0
 Linux (in general, although there are special instructions to install on Windows)
 
 ### Installing Ruby:
-This will vary slightly depending on your distro. Many distros fully provide all libraries in their main repositories, but openSUSE is not one of them. Although basic Ruby functionality is provided in the main repo, you need to install the special Ruby repo if you intend to install and benefit from latest stable additions and versions. On openSUSE you can install the Ruby repo as follows(modify openSUSE version if different). For any other distros, research a bit to determine what you may need to do (or not).
+. openSUSE is different than other distros. Many distros fully provide all libraries in their main repositories, but openSUSE is not one of them. Although basic Ruby functionality is provided in the main repo, you need to install the special Ruby repo if you intend to install and benefit from latest stable additions and versions. On openSUSE you can install the Ruby repo as follows(modify openSUSE version if different). For any other distros, research a bit to determine what you may need to do (or not).
 
-zypper ar http://download.opensuse.org/repositories/devel:/languages:/ruby:/extensions/openSUSE_13.2/ devel:languages:ruby:extensions && zypper ref
+```zypper ar http://download.opensuse.org/repositories/devel:/languages:/ruby:/extensions/openSUSE_13.2/ devel:languages:ruby:extensions && zypper ref```
 
-After you have installed required source repositories for your distro, you should first install basic ruby tools provided by your distro because sometimes generic versions from Ruby will not work (in openSUSE this is the case for "bundle").
-
-install Ruby at least version 2.0, development header and libraries, support for the ruby "gems" command, the ruby version manager(RVM). On openSUSE, the following and an appropriate javascript runtime... The following installs all that plus nodejs which is an excellent cross-platform js.
+install Ruby at least version 2.0, development header and libraries, support for the ruby "gems" command, the ruby version manager(RVM). On openSUSE, the following and an appropriate javascript runtime... The following installs the most current widely used version of Ruby as of this writing  plus nodejs which is an excellent cross-platform js runtime.
 
 ``` zypper in ruby ruby2.1 ruby2.1-devel rubygem-rubygems-update rubygem-bundler nodejs ```
 
