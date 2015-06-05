@@ -161,7 +161,7 @@ You have tested your website by running a small, non-production test webserver l
 ### (Only once, never again) Create initial local copy
 ```git clone```
 
-### (Required, uploading) You have made your proposed changes, now you need to "commit" your changes with a descriptive comment about your changes
+## (Required, uploading) You have made your proposed changes, now you need to "commit" your changes with a descriptive comment about your changes
 ```git commit -am "comment"```
 
 ## (Required, uploading) You have committed your proposed changes and certain about offering your changes to your Collaborators. Let us "push" your changes to Github.com. If you are missing any global configurations, you will be prompted to fix. When prompted, enter Username and Password.
