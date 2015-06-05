@@ -3,16 +3,19 @@ layout: plain
 ---
 
 
-# Jekyll How To (on openSUSE but the following should apply to any distro)
+# Jekyll How To using openSUSE specific steps
 Based on the documentation at http://jekyllrb.com
 
 ## Preamble:
 This documentation is written to avoid faulty mis-steps like the overly brief and insufficient documentation elsewhere, including http://jekyllbootstrap.com/
 
+## Caution:
+These steps and the resulting Ruby on Rails environment is very openSUSE specific. If this is only your website or other team members are all using openSUSE, then these steps are fine. But, if you intend to set up a website supported by multiple team members using different Linux distros (or even Windows) then wait for a follow up article which will describe building a common Development environment for all.
+
 ## Why and what is Jekyll?
-Jekyll is the current fully supported JS static website framework supported by Github.
-Github will serve all content including websites based entirely on publicly viewable code for free, no strings attached (except as of this writing file size).
-Free is good.
+Jekyll is the current fully supported JS static website framework supported by Github.<br />
+Github will serve all content including websites based entirely on publicly viewable code for free, no strings attached (except as of this writing file size).<br />
+Free is good.<br />
 Extreme stability and reliability plus unlimited storage for Free is even better.
 
 ## Preparation:
@@ -31,7 +34,7 @@ This will vary slightly depending on your distro. Many distros fully provide all
 
 zypper ar http://download.opensuse.org/repositories/devel:/languages:/ruby:/extensions/openSUSE_13.2/ devel:languages:ruby:extensions && zypper ref
 
-After you have installed required source repositories for your distro, you should first install basic ruby tools provided by your distro because sometimes generic versions from Ruby won't work (in openSUSE this is the case for "bundle").
+After you have installed required source repositories for your distro, you should first install basic ruby tools provided by your distro because sometimes generic versions from Ruby will not work (in openSUSE this is the case for "bundle").
 
 install Ruby at least version 2.0, development header and libraries, support for the ruby "gems" command, the ruby version manager(RVM). On openSUSE, the following and an appropriate javascript runtime... The following installs all that plus nodejs which is an excellent cross-platform js.
 
@@ -42,7 +45,7 @@ Cool! - After installing the prerequisites described above, you are now ready to
 
 ``` gem install jekyll ```
 
-You're now done installing, now on to creating a website!
+You are now done installing, now on to creating a website!
 
 
 
@@ -58,31 +61,31 @@ Create a directory for all your github projects.I arbitrarily recommend a subdir
 
 ``` mkdir ~/github ```
 
-Now, let's move your command line console to the directory you just created
+Now, let us move your command line console to the directory you just created
 
 ``` cd ~/github ```
 
-Setting that console aside for a moment, the next step is to create a repository on github, then create a local linked copy in this directory you just created. Although it's possible to create a new repo on github from your console, it's far easier and simpler to use a web browser.
+Setting that console aside for a moment, the next step is to create a repository on github, then create a local linked copy in this directory you just created. Although it is possible to create a new repo on github from your console, it is far easier and simpler to use a web browser.
 
-Open your web browser to "https://github.com/accountname" The "accountname would generally be either your own account handle/nickname or an organization's handle/nickname.
+Open your web browser to "https://github.com/accountname" The accountname would generally be either your own account handle/nickname or an organization handle/nickname.
 
 Verify your web browser is already logged into your account, in the bar running across the top of the page, to the right should display your name, a big "plus", a notifications(picture) icon, a settings icon, and a "sign out" icon. If your name is not displayed, login.
 
-After you've logged into github and your name is now showing, click on the big "plus" icon and select "New repository." If you're connecting to an organization, a repo may have already been created and you can skip this and the next couple steps to "Clone the repo on Github to your local machine"
+After you have logged into github and your name is now showing, click on the big "plus" icon and select "New repository." If you are connecting to an organization, a repo may have already been created and you can skip this and the next couple steps to "Clone the repo on Github to your local machine"
 
 The "Create Repository" page should now display, enter the name of the repo you wish to create and an optional description. Leave the Public/Private setting to Public, only public repos which can be viewed by everybody are free. Later if you wish, you can pay to create a private repo if you wish.  Do check the box "Initialize this repository with a README" -- This automatically configures some settings whether you intend to keep this file or not.
 
 Click the button "Create repository" to finish.
-Although Github says it can take minutes to create your repository, I've always seen github perform all tasks instantly (at most few seconds, shorter than it might take to switch to another app).
+Although Github says it can take minutes to create your repository, I have always seen github perform all tasks instantly (at most few seconds, shorter than it might take to switch to another app).
 
 Clone the repo on Github to your local machine
-Whether someone created a repo on Github for you or you just created your new repo, you're now ready to create a local working copy of the remote repo on your machine, with a configuration to easily "pull" changes made by others to your machine and "push" your own modifications to Github.
+Whether someone created a repo on Github for you or you just created your new repo, you are now ready to create a local working copy of the remote repo on your machine, with a configuration to easily "pull" changes made by others to your machine and "push" your own modifications to Github.
 
 First, using your web browser, browse to web page for your new repo. The breadcrumb on the webpage just below the bar at the top of the page should display your handle or nickname, slash reponame
 
-In the right pane on this page, you should see "HTTPS" over a URL and "Download ZIP" Copy the URL into memory (aka clipboard). The ZIP might be a convenience for anyone who simply wants a one time download and doesn't want an interactive copy of the files in the repo.
+In the right pane on this page, you should see "HTTPS" over a URL and "Download ZIP" Copy the URL into memory (aka clipboard). The ZIP might be a convenience for anyone who simply wants a one time download and doesn not want an interactive copy of the files in the repo.
 
-From your console, if it's not already at ~/github/ or a similar location according to your own organizational senses...
+From your console, if it is not already at ~/github/ or a similar location according to your own organizational senses...
 
 Enter the following into your console.
 ``` git clone [paste] ```
@@ -94,7 +97,7 @@ The "clone" command will
 - Copy the file contents of the repo on Github into your subdirectory with the repo name.
 
 Installing a new Jekyll bootstrap website
-This section is only for those who are creating something absolutely, really, really new and is unnecessary for anyone who has cloned an existing website. If you're simply collaborating on an existing website, you can skip the following steps which create a website and skip down to the section invoking an existing website (assumes you have performed the above, installing Jekyll prerequisites on your machine).
+This section is only for those who are creating something absolutely, really, really new and is unnecessary for anyone who has cloned an existing website. If you are simply collaborating on an existing website, you can skip the following steps which create a website and skip down to the section invoking an existing website (assumes you have performed the above, installing Jekyll prerequisites on your machine).
 
 Typically, your console app should currently be in ~/github/. You can ls to verify your cloned repo directory exists
 
@@ -104,14 +107,14 @@ Change directory your console to the root of your repo (not the github repo wher
 
 ``` cd directoryname ```
 
-You can ls again and find only one file "README.md" If you don't find a README.md, then you missed creating it as part of the repo creation. Although it's possible to manually finish the repo setup, for a beginner it's probably easier to delete the local repo and the Github repo, and create the Github repo again (with the README.md)
+You can ls again and find only one file "README.md" If you do not find a README.md, then you missed creating it as part of the repo creation. Although it is possible to manually finish the repo setup, for a beginner it is probably easier to delete the local repo and the Github repo, and create the Github repo again (with the README.md)
 
 ``` ls ```
 
 Now that you have a local copy of your nearly empty repo ready, we will now populate it with a Jekyll bootstrap website (beginning, functional website).
 
 IMPORTANT NOTE:
-The Reader will find it's noteworthy you can add (create new or copy from elsewhere) files into your local repo, but once you've pushed your copy to Github effectively synchronizing both a copy on Github with your local copy, you <cannot> simply delete or remove a file using ordinary means. You would have to use a git command to remove any files to ensure the removal is logged so it is also performed on the remote server.
+The Reader will find it is noteworthy you can add (create new or copy from elsewhere) files into your local repo, but once you have pushed your copy to Github effectively synchronizing both a copy on Github with your local copy, you <cannot> simply delete or remove a file using ordinary means. You would have to use a git command to remove any files to ensure the removal is logged so it is also performed on the remote server.
 
 Switching from the "main" to "gh-pages" branch
 The Main branch of a github repo simply stores and serves files. If you want your files deployed by the github webserver, you need to deploy your files to the "gh-pages" branch and <not> the "main" branch.
@@ -141,13 +144,12 @@ Now install the jekyll bootstrap (use whatever is appropriate in place of "jekyl
 
 ``` jekyll new . ```
 
-Now, if you wish you can immediately test your work by invoking the jekyll embedded webserver with the following command. After a few seconds auto-generating some default config files, the stdout will report "Server running... press ctrl-c to stop." When that displays, open a web browser to "http://localhost:4000
+Now, if you wish you can immediately test your work by invoking the jekyll embedded webserver with the following command. After a few seconds auto-generating some default config files, the stdout will report "Server running... press ctrl-c to stop." When that displays, open a web browser to "http://localhost:4000"
 
-``` jekyll serve ```
+```jekyllserve ```
 
 
 # Pushing to github.com
-
 You have tested your website by running a small, non-production test webserver locally, you can now push it to github for the world to see... Perform the following "Required" steps for uploading to github (other commands are listed here which may be helpful).
 
 ## The basic steps for interacting with a github repository
