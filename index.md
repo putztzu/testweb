@@ -155,22 +155,22 @@ You have tested your website by running a small, non-production test webserver l
 ## The basic steps for interacting with a github repository
 
 ### (optional) Lost track what what you have done?<br />
-Have your changes been committed? Anything else that is missing before your next step? "Status" displays pending changes and proposes a logical next step
+Have your changes been committed? Anything else that is missing before your next step? "Status" displays pending changes and proposes a logical next step<br />
 ```git status```
 
 ### (optional) "Pull"<br />
-If you believe the remote repo at github.com might have been modified since you last created or updated your local copy. This "pulls" any changes so you are up to date. Essential to minimize later "merge" inconsistencies.
+If you believe the remote repo at github.com might have been modified since you last created or updated your local copy. This "pulls" any changes so you are up to date. Essential to minimize later "merge" inconsistencies.<br />
 ```git pull```
 
-### (Only once, never again) Create initial local copy
+### (Only once, never again) Create initial local copy<br />
 ```git clone```
 
 ## (Required, uploading)<br />
-You have made your proposed changes, now you need to "commit" your changes with a descriptive comment about your changes
+You have made your proposed changes, now you need to "commit" your changes with a descriptive comment about your changes<br />
 ```git commit -am "comment"```
 
 ## (Required, uploading)<br />
-You have committed your proposed changes and certain about offering your changes to your Collaborators. Let us "push" your changes to Github.com. If you are missing any global configurations, you will be prompted to fix. When prompted, enter Username and Password.
+You have committed your proposed changes and certain about offering your changes to your Collaborators. Let us "push" your changes to Github.com. If you are missing any global configurations, you will be prompted to fix. When prompted, enter Username and Password.<br />
 ```git push
 ```
 
