@@ -72,30 +72,31 @@ Verify your web browser is already logged into your account, in the bar running 
 
 After you have logged into github and your name is now showing, click on the big "plus" icon and select "New repository." If you are connecting to an organization, a repo may have already been created and you can skip this and the next couple steps to "Clone the repo on Github to your local machine"
 
-The "Create Repository" page should now display, enter the name of the repo you wish to create and an optional description. Leave the Public/Private setting to Public, only public repos which can be viewed by everybody are free. Later if you wish, you can pay to create a private repo if you wish.  Do check the box "Initialize this repository with a README" -- This automatically configures some settings whether you intend to keep this file or not.
+The "Create Repository" page should now display, enter the name of the repo you wish to create and an optional description. Leave the Public/Private setting to Public, only public repos which can be viewed by everybody are free. Later if you wish, you can pay to create a private repo.  Do check the box "Initialize this repository with a README" -- This automatically configures some settings whether you intend to keep this file or not.
 
-Click the button "Create repository" to finish.
+Click the button "Create repository" to finish.<br />
 Although Github says it can take minutes to create your repository, I have always seen github perform all tasks instantly (at most few seconds, shorter than it might take to switch to another app).
 
-Clone the repo on Github to your local machine
+Clone the repo on Github to your local machine<br />
 Whether someone created a repo on Github for you or you just created your new repo, you are now ready to create a local working copy of the remote repo on your machine, with a configuration to easily "pull" changes made by others to your machine and "push" your own modifications to Github.
 
-First, using your web browser, browse to web page for your new repo. The breadcrumb on the webpage just below the bar at the top of the page should display your handle or nickname, slash reponame
+First, using your web browser, browse to the web page for your new repo. The breadcrumb on the webpage just below the bar at the top of the page should display your handle or nickname, slash reponame
 
-In the right pane on this page, you should see "HTTPS" over a URL and "Download ZIP" Copy the URL into memory (aka clipboard). The ZIP might be a convenience for anyone who simply wants a one time download and doesn not want an interactive copy of the files in the repo.
+In the right pane on this page, you should see "HTTPS" over a URL and "Download ZIP" Copy the URL into memory (aka clipboard). The ZIP might be a convenience for anyone who simply wants a one time download and doesn't want an interactive copy of the files in the repo.
 
 From your console, if it is not already at ~/github/ or a similar location according to your own organizational senses...
 
-Enter the following into your console.
-``` git clone [paste] ```
+Enter the following into your console which is the command to "git clone youruri" .<br />
+``` git clone [paste] ``` followed by "enter"
+
 
 On some distros, you might not be able to paste from the clipboard into your console. If this is your situation, simply paste the clipboard contents into your GUI text editor so you can see the entire URL and manually enter the above command into your console.
 
-The "clone" command will
-- Automatically create a new subdirectory using the repo name
+The "clone" command will<br />
+- Automatically create a new subdirectory using the repo name<br />
 - Copy the file contents of the repo on Github into your subdirectory with the repo name.
 
-Installing a new Jekyll bootstrap website
+Installing a new Jekyll bootstrap website<br />
 This section is only for those who are creating something absolutely, really, really new and is unnecessary for anyone who has cloned an existing website. If you are simply collaborating on an existing website, you can skip the following steps which create a website and skip down to the section invoking an existing website (assumes you have performed the above, installing Jekyll prerequisites on your machine).
 
 Typically, your console app should currently be in ~/github/. You can ls to verify your cloned repo directory exists
@@ -112,10 +113,10 @@ You can ls again and find only one file "README.md" If you do not find a README.
 
 Now that you have a local copy of your nearly empty repo ready, we will now populate it with a Jekyll bootstrap website (beginning, functional website).
 
-IMPORTANT NOTE:
+IMPORTANT NOTE:<br />
 The Reader will find it is noteworthy you can add (create new or copy from elsewhere) files into your local repo, but once you have pushed your copy to Github effectively synchronizing both a copy on Github with your local copy, you <cannot> simply delete or remove a file using ordinary means. You would have to use a git command to remove any files to ensure the removal is logged so it is also performed on the remote server.
 
-Switching from the "main" to "gh-pages" branch
+Switching from the "main" to "gh-pages" branch<br />
 The Main branch of a github repo simply stores and serves files. If you want your files deployed by the github webserver, you need to deploy your files to the "gh-pages" branch and <not> the "main" branch.
 
 The previous instructions to this point has instructed how to create a repository on Github.com and clone a local copy on your machine, but by default it will sync only the main branch. We need to change from the main branch to the gh-pages branch for github webserver functionality.
