@@ -117,7 +117,7 @@ IMPORTANT NOTE:<br />
 The Reader will find it is noteworthy you can add (create new or copy from elsewhere) files into your local repo, but once you have pushed your copy to Github effectively synchronizing both a copy on Github with your local copy, you cannot simply delete or remove a file using ordinary means. You would have to use the git command "git rm filename" to remove any files to ensure the removal is logged so it is also performed on the remote server.
 
 Switching from the "main" to "gh-pages" branch<br />
-The Main branch of a github repo simply stores and serves files. If you want your files deployed by the github webserver, you need to deploy your files to the "gh-pages" branch and <not> the "main" branch.
+The Main branch of a github repo simply stores and serves files. If you want your files deployed by the github webserver, you need to deploy your files to the "gh-pages" branch and not the "main" branch.
 
 The previous instructions to this point has instructed how to create a repository on Github.com and clone a local copy on your machine, but by default it will sync only the main branch. We need to change from the main branch to the gh-pages branch for github webserver functionality.
 
