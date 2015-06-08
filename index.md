@@ -171,7 +171,7 @@ You have tested your website by running a small, non-production test webserver l
 
 You should now be able to view your website on github using the following URL (modify accordingly)
 
-``` https:Username.github.io/reponame ```
+``` https://Username.github.io/reponame ```
 
 
 ## Some useful references:
