@@ -178,7 +178,7 @@ You should now be able to view your website on github using the following URL (m
 ``` https://Username.github.io/reponame ```
 
 
-## Some useful references:
+## Some useful references: <br />
 ### Github flavored Markdown
 Now that you have your bootstrap deployed to Github, you can modify pages however you wish on your local copy, then pushed to Github. But whether you are familiar with HTML or not, what is this Markdown? It is a faster alternative to HTML, although you can use HTML this is your reference to using Markdown on Github<br />
 https://help.github.com/articles/github-flavored-markdown<br />
