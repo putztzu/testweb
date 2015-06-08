@@ -154,19 +154,23 @@ You have tested your website by running a small, non-production test webserver l
 
 ## The basic steps for interacting with a github repository
 
-### (optional) Lost track what what you have done? Have your changes been committed? Anything else that is missing before your next step? "Status" displays pending changes and proposes a logical next step
+### (optional) Lost track what what you have done?
+Have your changes been committed? Anything else that is missing before your next step? "Status" displays pending changes and proposes a logical next step
 ```git status```
 
-### (optional) "Pull" only if you believe the remote repo at github.com might have been modified since you last created or updated your local copy. This "pulls" any changes so you are up to date. Essential to minimize later "merge" inconsistencies.
+### (optional) "Pull"
+If you believe the remote repo at github.com might have been modified since you last created or updated your local copy. This "pulls" any changes so you are up to date. Essential to minimize later "merge" inconsistencies.
 ```git pull```
 
 ### (Only once, never again) Create initial local copy
 ```git clone```
 
-## (Required, uploading) You have made your proposed changes, now you need to "commit" your changes with a descriptive comment about your changes
+## (Required, uploading)
+You have made your proposed changes, now you need to "commit" your changes with a descriptive comment about your changes
 ```git commit -am "comment"```
 
-## (Required, uploading) You have committed your proposed changes and certain about offering your changes to your Collaborators. Let us "push" your changes to Github.com. If you are missing any global configurations, you will be prompted to fix. When prompted, enter Username and Password.
+## (Required, uploading)
+You have committed your proposed changes and certain about offering your changes to your Collaborators. Let us "push" your changes to Github.com. If you are missing any global configurations, you will be prompted to fix. When prompted, enter Username and Password.
 ```git push
 ```
 
@@ -176,24 +180,24 @@ You should now be able to view your website on github using the following URL (m
 
 
 ## Some useful references:
-###Github flavored Markdown
+### Github flavored Markdown
 Now that you have your bootstrap deployed to Github, you can modify pages however you wish on your local copy, then pushed to Github. But whether you are familiar with HTML or not, what is this Markdown? It is a faster alternative to HTML, although you can use HTML this is your reference to using Markdown on Github<br />
 https://help.github.com/articles/github-flavored-markdown<br />
 A popular Cheatsheet to keep at your elbow<br />
 https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
-###Some other advanced concepts
+### Some other advanced concepts
 Javascript frameworks are great. They are pre-packaged libraries of functionality you can invoke often by command instead of writing all the necessary code yourself.You can either deploy the library files in a subdirectory of your website and reference it in the page <head></head> or you can reference a CDN (Content Delivery Network) in the head so that the Client downloads from there instead.
 
-###Change your look!
+### Change your look!
 Jekyll implements Liquid themes so that you can change the look instantly without affecting the content.
 
-###Some Jekyll Themes (available)
+### Some Jekyll Themes (available)
 https://github.com/jekyll/jekyll/wiki/Themes
-###More Themes
+### More Themes
 http://jekyllthemes.org/
 
-###Switching from one theme to another, aka Changing your clothes
+### Switching from one theme to another, aka Changing your clothes
 At least one popular Jekyll "How To" site described creating a new site and migrating content, Don not! You can find, browse and install themes using rake<br />
 http://jekyllbootstrap.com/usage/jekyll-theming.html
 
