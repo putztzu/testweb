@@ -159,6 +159,8 @@ Now, if you wish you can immediately test your work by invoking the jekyll embed
 You have tested your website by running a small, non-production test webserver locally, you can now push it to github for the world to see... Perform the following "Required" steps for uploading to github (other commands are listed here which may be helpful).
 
 ## The basic steps for interacting with a github repository
+For most people, if you never are never in a position to manage a github repo... merging, rollback, managing different branches and resolving inconsistencies the following 5 git commands may be all you'll ever use.
+
 
 ### (optional) Lost track what what you have done?<br />
 Have your changes been committed? Anything else that is missing before your next step? "Status" displays pending changes and proposes a logical next step <br />
