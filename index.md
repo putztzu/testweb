@@ -10,6 +10,8 @@ Based on the documentation at http://jekyllrb.com
 ## Preamble:
 This documentation is written to avoid faulty mis-steps like the overly brief and insufficient documentation elsewhere, including http://jekyllbootstrap.com/
 
+This document was created following the steps described here, and was used as the initial testbed for this Guide. A curious person can clone this website and inspect everything about it, including the markdown syntax used.
+
 ## Caution:
 These steps and the resulting Ruby on Rails environment is very openSUSE specific. If this is only your website or other team members are all using openSUSE, then these steps are fine. But, if you intend to set up a website supported by multiple team members using different Linux distros (or even Windows) then wait for a follow up article which will describe building a common Development environment for all.
 
@@ -107,7 +109,7 @@ Typically, your console app should currently be in ~/github/. You can ls to veri
 
 Change directory your console to the root of your repo (not the github repo where you likely are).
 
-``` cd _directoryname_ ```
+``` cd ```_directoryname_
 
 You can ls again and find only one file "README.md" If you do not find a README.md, then you missed creating it as part of the repo creation. Although it is possible to manually finish the repo setup, for a beginner it is probably easier to delete the local repo and the Github repo, and create the Github repo again (with the README.md)
 
@@ -123,11 +125,11 @@ The Main branch of a github repo simply stores and serves files like an ordinary
 
 The previous instructions to this point have described  how to create a repository on Github.com and clone a local copy on your machine, but by default it will sync only the main branch. We need to change from the main branch to the gh-pages branch for github webserver functionality.
 
-The following steps are exactly what is described in the official "github creating gh-pages manually" https://help.github.com/articles/creating-project-pages-manually/
+The following steps are what is described in the official "github creating gh-pages manually" https://help.github.com/articles/creating-project-pages-manually/
 
 If your console isn't already at the root of your local, cloned repo.<br />
 
-``` cd _repository_ ```
+``` cd ``` **repository**
 
 ``` git checkout --orphan gh-pages ```<br />
 # Creates our branch, without any parents (it is an orphan!)<br />
@@ -205,8 +207,8 @@ https://github.com/jekyll/jekyll/wiki/Themes
 ### More Themes
 http://jekyllthemes.org/
 
-### Switching from one theme to another, aka Changing your clothes
-At least one popular Jekyll "How To" site described creating a new site and migrating content, Don not! You can find, browse and install themes using rake<br />
+### Switching from one theme to another, aka Changing your Look
+At least one popular Jekyll "How To" site described creating a new site and migrating content to simply change themes, Don't! You can find, browse and install themes using rake<br />
 http://jekyllbootstrap.com/usage/jekyll-theming.html
 
 
