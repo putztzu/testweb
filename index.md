@@ -107,7 +107,7 @@ Typically, your console app should currently be in ~/github/. You can ls to veri
 
 Change directory your console to the root of your repo (not the github repo where you likely are).
 
-``` cd directoryname ```
+``` cd _directoryname_ ```
 
 You can ls again and find only one file "README.md" If you do not find a README.md, then you missed creating it as part of the repo creation. Although it is possible to manually finish the repo setup, for a beginner it is probably easier to delete the local repo and the Github repo, and create the Github repo again (with the README.md)
 
@@ -115,30 +115,32 @@ You can ls again and find only one file "README.md" If you do not find a README.
 
 Now that you have a local copy of your nearly empty repo ready, we will now populate it with a Jekyll bootstrap website (beginning, functional website).
 
-IMPORTANT NOTE:<br />
+*IMPORTANT NOTE:*<br />
 The Reader will find it is noteworthy you can add (create new or copy from elsewhere) files into your local repo, but once you have pushed your copy to Github effectively synchronizing both a copy on Github with your local copy, you cannot simply delete or remove a file using ordinary means. You would have to use the git command "git rm _filename_" to remove any files to ensure the removal is logged so it is also performed on the remote server.
 
 ### Switching from the "main" to "gh-pages" branch<br />
-The Main branch of a github repo simply stores and serves files. If you want your files deployed by the github webserver, you need to deploy your files to the "gh-pages" branch and not the "main" branch.
+The Main branch of a github repo simply stores and serves files like an ordinary file server. If you want your files deployed by the github webserver, you need to deploy your files to the "gh-pages" branch and not the "main" branch.
 
-The previous instructions to this point has instructed how to create a repository on Github.com and clone a local copy on your machine, but by default it will sync only the main branch. We need to change from the main branch to the gh-pages branch for github webserver functionality.
+The previous instructions to this point have described  how to create a repository on Github.com and clone a local copy on your machine, but by default it will sync only the main branch. We need to change from the main branch to the gh-pages branch for github webserver functionality.
 
 The following steps are exactly what is described in the official "github creating gh-pages manually" https://help.github.com/articles/creating-project-pages-manually/
 
-``` cd repository ```
+If your console isn't already at the root of your local, cloned repo.
+``` cd _repository_ ```
 
 ``` git checkout --orphan gh-pages ```<br />
 # Creates our branch, without any parents (it is an orphan!)<br />
 # Switched to a new branch 'gh-pages'
 
 
+Although you've switched to gh-pages, your local repo copy is still populated with the files in the main branch. You need to remove those files with the following commands (note using the "git rm" command because the ordinary "rm" command is insufficient)<br />
 ``` git rm -rf .```<br />
 # Remove all files from the old working tree. Notice hard to see "." designating "any/all files"
 rm '.gitignore'
 
-Now, you can install your Jekyll bootstrap(a functional minimal website with full file layout and scripting support)
+Now that your repo is connected to the gh-pages branch and is completely empty, you can install your Jekyll bootstrap(a functional minimal website with full file layout and scripting support)
 
-NOTE: On openSUSE and possibly other distros, different versions of jekyll may be installed. If the "jekyll" command doesn not work immediately, then the binary name may have been modified to reflect the version. To determine the binary name, run the following command and use the result in place of the generic "jekyll" from now forward.
+*NOTE:* On openSUSE and possibly other distros, different versions of jekyll may be installed. If the "jekyll" command doesn not work immediately, then the binary name may have been modified to reflect the version. To determine the binary name, run the following command and use the result in place of the generic "jekyll" from now forward.
 
 ``` ls /usr/bin/jekyll* ```
 
