@@ -173,7 +173,7 @@ If you believe the remote repo at github.com might have been modified since you 
 ``` git pull ```
 
 ### (Only once, never again) Create initial local copy <br />
-``` git clone *reponame* ```
+``` git clone ```*reponame*
 
 ## (Required, uploading)<br />
 You have made your proposed changes, now you need to "commit" your changes with a descriptive comment about your changes <br />
