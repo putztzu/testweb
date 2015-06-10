@@ -109,7 +109,7 @@ Typically, your console app should currently be in ~/github/. You can ls to veri
 
 Change directory your console to the root of your repo (not the github repo where you likely are).
 
-``` cd ```_directoryname_
+``` cd ``` _directoryname_
 
 You can ls again and find only one file "README.md" If you do not find a README.md, then you missed creating it as part of the repo creation. Although it is possible to manually finish the repo setup, for a beginner it is probably easier to delete the local repo and the Github repo, and create the Github repo again (with the README.md)
 
@@ -129,7 +129,7 @@ The following steps are what is described in the official "github creating gh-pa
 
 If your console isn't already at the root of your local, cloned repo.<br />
 
-``` cd ``` **repository**
+``` cd ``` *repository*
 
 ``` git checkout --orphan gh-pages ```<br />
 # Creates our branch, without any parents (it is an orphan!)<br />
