@@ -56,6 +56,7 @@ The following describes creating a bootstrap website which means a fully functio
 
 Although for a personal website you can create one anywhere on your machine, the following specifically recommends an approach for creating a website for deployment on Github.
 
+### Decide, and designate a location for your Github projects
 Create a directory for all your github projects.I arbitrarily recommend a subdirectory of the current User Home directory, ie /home/username/ This folder can be created with the following command from a console app of your choice (Some popular console apps include BASH, Konsole, xconsole, )
 
 ``` mkdir ~/github ```
@@ -64,6 +65,7 @@ Now, let us move your command line console to the directory you just created
 
 ``` cd ~/github ```
 
+### Create a repository on Github
 Setting that console aside for a moment, the next step is to create a repository on github, then create a local linked copy in this directory you just created. Although it is possible to create a new repo on github from your console, it is far easier and simpler to use a web browser.
 
 Open your web browser to "https://github.com/accountname" The accountname would generally be either your own account handle/nickname or an organization handle/nickname.
@@ -77,8 +79,8 @@ The "Create Repository" page should now display, enter the name of the repo you 
 Click the button "Create repository" to finish.<br />
 Although Github says it can take minutes to create your repository, I have always seen github perform all tasks instantly (at most few seconds, shorter than it might take to switch to another app).
 
-Clone the repo on Github to your local machine<br />
-Whether someone created a repo on Github for you or you just created your new repo, you are now ready to create a local working copy of the remote repo on your machine, with a configuration to easily "pull" changes made by others to your machine and "push" your own modifications to Github.
+### Clone the repo on Github to your local machine<br />
+Whether someone created a repo on Github for you or you just created your new repo, you are now ready to create a local working copy of the remote repo on your machine, and  "push" your own modifications to Github.
 
 First, using your web browser, browse to the web page for your new repo. The breadcrumb on the webpage just below the bar at the top of the page should display your handle or nickname, slash reponame
 
@@ -86,7 +88,7 @@ In the right pane on this page, you should see "HTTPS" over a URL and "Download 
 
 From your console, if it is not already at ~/github/ or a similar location according to your own organizational senses...
 
-Enter the following into your console which is the command to "git clone youruri" .<br />
+Enter the following into your console which is the command to "git clone _youruri_" .<br />
 ``` git clone [paste] ``` followed by "enter"
 
 
@@ -96,7 +98,7 @@ The "clone" command will<br />
 - Automatically create a new subdirectory using the repo name<br />
 - Copy the file contents of the repo on Github into your subdirectory with the repo name.
 
-Installing a new Jekyll bootstrap website<br />
+### Installing a new Jekyll bootstrap website<br />
 This section is only for those who are creating something absolutely, really, really new and is unnecessary for anyone who has cloned an existing website. If you are simply collaborating on an existing website, you can skip the following steps which create a website and skip down to the section invoking an existing website (assumes you have performed the above, installing Jekyll prerequisites on your machine).
 
 Typically, your console app should currently be in ~/github/. You can ls to verify your cloned repo directory exists
@@ -114,9 +116,9 @@ You can ls again and find only one file "README.md" If you do not find a README.
 Now that you have a local copy of your nearly empty repo ready, we will now populate it with a Jekyll bootstrap website (beginning, functional website).
 
 IMPORTANT NOTE:<br />
-The Reader will find it is noteworthy you can add (create new or copy from elsewhere) files into your local repo, but once you have pushed your copy to Github effectively synchronizing both a copy on Github with your local copy, you cannot simply delete or remove a file using ordinary means. You would have to use the git command "git rm filename" to remove any files to ensure the removal is logged so it is also performed on the remote server.
+The Reader will find it is noteworthy you can add (create new or copy from elsewhere) files into your local repo, but once you have pushed your copy to Github effectively synchronizing both a copy on Github with your local copy, you cannot simply delete or remove a file using ordinary means. You would have to use the git command "git rm _filename_" to remove any files to ensure the removal is logged so it is also performed on the remote server.
 
-Switching from the "main" to "gh-pages" branch<br />
+### Switching from the "main" to "gh-pages" branch<br />
 The Main branch of a github repo simply stores and serves files. If you want your files deployed by the github webserver, you need to deploy your files to the "gh-pages" branch and not the "main" branch.
 
 The previous instructions to this point has instructed how to create a repository on Github.com and clone a local copy on your machine, but by default it will sync only the main branch. We need to change from the main branch to the gh-pages branch for github webserver functionality.
@@ -125,12 +127,12 @@ The following steps are exactly what is described in the official "github creati
 
 ``` cd repository ```
 
-``` git checkout --orphan gh-pages ```
+``` git checkout --orphan gh-pages ```<br />
 # Creates our branch, without any parents (it is an orphan!)<br />
 # Switched to a new branch 'gh-pages'
 
 
-``` git rm -rf .```
+``` git rm -rf .```<br />
 # Remove all files from the old working tree. Notice hard to see "." designating "any/all files"
 rm '.gitignore'
 
