@@ -183,7 +183,7 @@ You have committed your proposed changes and certain about offering your changes
 
 You should now be able to view your website on github using the following URL (modify accordingly)
 
-``` https://**_Username_**.github.io/**_reponame_** ```
+``` https://```**_Username_**```.github.io/```**_reponame_** 
 
 
 ## Some useful references:
