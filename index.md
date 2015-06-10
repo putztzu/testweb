@@ -115,7 +115,7 @@ You can ls again and find only one file "README.md" If you do not find a README.
 
 Now that you have a local copy of your nearly empty repo ready, we will now populate it with a Jekyll bootstrap website (beginning, functional website).
 
-*IMPORTANT NOTE:*<br />
+** IMPORTANT NOTE:** <br />
 The Reader will find it is noteworthy you can add (create new or copy from elsewhere) files into your local repo, but once you have pushed your copy to Github effectively synchronizing both a copy on Github with your local copy, you cannot simply delete or remove a file using ordinary means. You would have to use the git command "git rm _filename_" to remove any files to ensure the removal is logged so it is also performed on the remote server.
 
 ### Switching from the "main" to "gh-pages" branch<br />
@@ -125,7 +125,7 @@ The previous instructions to this point have described  how to create a reposito
 
 The following steps are exactly what is described in the official "github creating gh-pages manually" https://help.github.com/articles/creating-project-pages-manually/
 
-If your console isn't already at the root of your local, cloned repo.
+If your console isn't already at the root of your local, cloned repo.<br />
 ``` cd _repository_ ```
 
 ``` git checkout --orphan gh-pages ```<br />
@@ -140,7 +140,7 @@ rm '.gitignore'
 
 Now that your repo is connected to the gh-pages branch and is completely empty, you can install your Jekyll bootstrap(a functional minimal website with full file layout and scripting support)
 
-*NOTE:* On openSUSE and possibly other distros, different versions of jekyll may be installed. If the "jekyll" command doesn not work immediately, then the binary name may have been modified to reflect the version. To determine the binary name, run the following command and use the result in place of the generic "jekyll" from now forward.
+** NOTE:** On openSUSE and possibly other distros, different versions of jekyll may be installed. If the "jekyll" command does not work immediately, then the binary name may have been modified to reflect the version. To determine the binary name, run the following command and use the result in place of the generic "jekyll" from now forward.
 
 ``` ls /usr/bin/jekyll* ```
 
@@ -167,7 +167,7 @@ If you believe the remote repo at github.com might have been modified since you 
 ``` git pull ```
 
 ### (Only once, never again) Create initial local copy <br />
-``` git clone ```
+``` git clone *reponame* ```
 
 ## (Required, uploading)<br />
 You have made your proposed changes, now you need to "commit" your changes with a descriptive comment about your changes <br />
@@ -179,7 +179,7 @@ You have committed your proposed changes and certain about offering your changes
 
 You should now be able to view your website on github using the following URL (modify accordingly)
 
-``` https://Username.github.io/reponame ```
+``` https://**_Username_**.github.io/**_reponame_** ```
 
 
 ## Some useful references:
