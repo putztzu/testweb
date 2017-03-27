@@ -44,7 +44,7 @@ install Ruby at least version 2.0, development header and libraries, support for
 ## Installing Jekyll
 Cool! - After installing the prerequisites described above, you are now ready to install Jekyll not from your ordinary repositories but from the official Ruby repositories. Invoke the following
 
-``` gem install jekyll ```
+``` gem install jekyll minima jekyll-feed```
 
 You are now done installing, now on to creating a website!
 
@@ -154,7 +154,7 @@ Now install the jekyll bootstrap (use whatever is appropriate in place of "jekyl
 
 Now, if you wish you can immediately test your work by invoking the jekyll embedded webserver with the following command. After a few seconds auto-generating some default config files, the stdout will report "Server running... press ctrl-c to stop." When that displays, open a web browser to "http://localhost:4000"
 
-```jekyllserve ```
+```jekyll serve ```
 
 
 # Pushing to github.com
