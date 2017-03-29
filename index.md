@@ -140,7 +140,7 @@ Although you've switched to gh-pages, your local repo copy is still populated wi
 
 ``` git rm -rf .```<br />
 # Remove all files from the old working tree. Notice hard to see "." designating "any/all files"
-rm '.gitignore'
+``` rm '.gitignore'```
 
 Now that your repo is connected to the gh-pages branch and is completely empty, you can install your Jekyll bootstrap(a functional minimal website with full file layout and scripting support)
 
@@ -173,7 +173,7 @@ If you believe the remote repo at github.com might have been modified since you 
 ``` git pull ```
 
 ### (Only once, never again) Create initial local copy <br />
-``` git clone ```*reponame*
+``` git clone ``` *reponame*
 
 ## (Required, uploading)<br />
 You have made your proposed changes, now you need to "commit" your changes with a descriptive comment about your changes <br />
@@ -181,7 +181,12 @@ You have made your proposed changes, now you need to "commit" your changes with 
 
 ## (Required, uploading)<br />
 You have committed your proposed changes and certain about offering your changes to your Collaborators. Let us "push" your changes to Github.com. If you are missing any global configurations, you will be prompted to fix. When prompted, enter Username and Password. <br />
+If you cloned a Jekyll website that came from somewhere else, then a gh-pages branch already exists on github and you can do a normal "push" as follows <br />
 ``` git push ```
+
+But, if you are creating a brand new Jekyll website on your local machine and want to upload your changes to github, then a gh-pages branch exists on your local machine containing the website but a gh-pages branch does not yet exist on github (You ran the command "git checkout --orphan gh-pages"<br />
+Run the following command which both creates the new branch on github and uploads the gh-pages branch on your local machine to github<br />
+``` git push --set-upstream origin gh-pages```<br />
 
 You should now be able to view your website on github using the following URL (modify accordingly)
 
